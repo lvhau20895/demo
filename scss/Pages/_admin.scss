@@ -1,0 +1,92 @@
+.admin {
+	margin-top: 200px;
+	.container {
+		position: relative;
+		.add {
+			text-decoration: none;
+			font-size: 30px;
+			cursor: pointer;
+			& span::before {
+				content: attr(data-attr);
+				position: absolute;
+				bottom: 0;
+				left: 12px;
+				background: $color-gold;
+				color: $color-white-e;
+				padding: 5px 20px;
+				border-radius: 4px;
+				font-size: 18px;
+				transform-origin: top;
+				transition: 0.5s;
+				transform: rotateX(90deg) translateY(-50%);
+			}
+			&:hover span::before {
+				transform: rotateX(0deg) translateY(0%);
+			}
+			& span::after {
+				content: attr(data-attr);
+				position: absolute;
+				bottom: 0;
+				left: 12px;
+				background: $color-dark-2;
+				color: $color-white-e;
+				padding: 5px 20px;
+				border-radius: 4px;
+				font-size: 18px;
+				transform-origin: bottom;
+				transition: 0.5s;
+				transform: rotateX(0deg) translateY(0%);
+			}
+			&:hover span::after {
+				transform: rotateX(90deg) translateY(50%);
+			}
+		}
+		.search {
+			&:focus {
+				box-shadow: none;
+				border-color: $color-white-e;
+			}
+		}
+		.icon-search {
+			background: $color-gray;
+			border-color: $color-gray;
+			cursor: pointer;
+			i {
+				color: $color-white-e;
+				transition: all 0.5s;
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}
+
+.table {
+	margin-top: 50px;
+	thead {
+		th {
+			background: $color-gold;
+			border: 1px solid $color-gold;
+			padding: 15px 0;
+		}
+	}
+	tbody {
+		td {
+			border: 1px solid $color-white-e;
+			height: 100px;
+		}
+	}
+}
+
+.btn-gold {
+	background: $color-gold;
+	color: $color-white-e;
+	border: 1px solid $color-gold;
+    padding: 6px 20px;
+	&:hover {
+		background: #dfb46d;
+		color: $color-white-e;
+		border: 1px solid #dfb46d;
+	}
+}
